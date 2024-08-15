@@ -1,0 +1,39 @@
+/* Base Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px; 
+    box-sizing: border-box;
+}
+
+/* Desktop 1920px */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1760px;
+        padding: 0 32px; 
+    }
+}
+
+/* Tablet 1024px */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 928px; 
+        padding: 0 24px; 
+    }
+}
+
+/* Tablet 768px */
+@media (max-width: 768px) {
+    .container {
+        max-width: 712px; 
+        padding: 0 20px; 
+    }
+}
+
+/* Mobile 375px */
+@media (max-width: 375px) {
+    .container {
+        max-width: 343px;
+        padding: 0 16px; 
+    }
+}
