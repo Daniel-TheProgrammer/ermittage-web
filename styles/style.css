@@ -204,7 +204,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 30;
+  z-index: 50;
 }
 
 header {
@@ -549,7 +549,7 @@ header .heading {
   padding: 230px 0 60px 0;
 }
 
-.footer_outer_container .container{
+.footer_outer_container .container {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -558,8 +558,9 @@ header .heading {
   display: flex;
   justify-content: space-between;
   padding-bottom: 60px;
+  border-bottom: 1px solid var(--color-grey);
 }
-.heading__name svg{
+.heading__name svg {
   width: 100% !important;
 }
 
@@ -579,11 +580,93 @@ header .heading {
   flex-direction: column;
 }
 
-.award_title{
+.award_title {
   text-transform: uppercase;
   color: var(--color-white);
   font-family: var(--font-family-title);
   font-size: 32px;
+}
+
+.footermiddle_section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.middle_context_container,
+.footerlast_container_upper,
+.footerlast_container_upper .upper,
+.footerlast_container_upper .middle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.context_heading {
+  color: var(--color-grey);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-main);
+}
+.context_subheading {
+  text-transform: uppercase;
+  font-size: var(--font-size-subtitle);
+  font-family: var(--font-family-title);
+  color: var(--color-white);
+}
+.footerlast_container_upper {
+  gap: 0;
+  width: 416px;
+}
+
+.footerlast_container_upper .upper,
+.footerlast_container_upper .middle {
+  gap: 16px;
+}
+.footerlast_container_upper .middle{
+  margin-top: 30px;
+}
+.footerlast_container_upper .upper > div {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-grey);
+}
+.middle .middle_text_context{
+  color: var(--color-white);
+  font-size: var(--font-size-subtitle);
+  text-transform: uppercase;
+  font-family: var(--font-family-title);
+}
+
+.dropdown_container > div{
+  flex-grow: 1;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.dropdown_container, .dropdown_box{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.dropdown_box{
+  flex-grow: 1;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-grey);
+}
+.dropdown_box div{
+  flex-grow: 1;
+  
+}
+
+.dropdown_box div span{
+  font-size: var(--font-size-body);
+  color: var(--color-grey);
+  font-size: var(--font-family-main);
+}
+.footerlast_context{
+  font-size: 13px;
+  font-family: var(--font-family-main);
+  color: var(--color-grey);
 }
 @media (max-width: 767px) {
   :root {
