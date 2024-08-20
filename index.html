@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,45 @@
     <link href="./styles/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div class="menu_container">
+      <div class="left_menu_container">
+        <div>
+          <ul>
+            <li><a>Концепция проекта</a></li>
+
+             <li><a>О проекте</a></li>
+              <li><a>Умные системы</a></li>
+               <li><a>Паркинг</a></li>
+                <li><a>Квартиры с ремонтом</a></li>
+                 <li><a>Как купить </a></li>
+             <li><a>Акции</a></li>
+          </ul>
+        </div>
+        <div class="left_menu_lower">
+          <div>
+            <p>Новости</p>
+            <p>Ход строительства</p>
+            <p>Памятка дольщика</p>
+            <p>Документы</p>
+            <p>О застройщике</p>
+            <p>Контакты</p>
+          </div>
+          <div>
+            <div class="play">
+              <img src="../assets/images/play.png" alt="" />
+              <span>видео о проекте</span>
+            </div>
+            <div class="download">
+              <img src="../assets/images/download.png" alt="" />
+              <span>скачать PDF-буклет</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="nav_header__wrapper">
       <nav>
+        <div class="mobile_btn_container">резиденции</div>
         <div class="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,9 +138,17 @@
         </div>
         <div class="nav_right">
           <button>+7 968 879-54-85</button>
-          <div class="hamburger">
-            <div></div>
-            <div></div>
+          <div class="menutoggler">
+            <div class="hamburger ">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="closemenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect width="54.224" height="1.80747" rx="0.903733" transform="matrix(0.707203 -0.70701 0.707203 0.70701 0.375 38.3359)" fill="white"/>
+                <rect width="54.224" height="1.80747" rx="0.903733" transform="matrix(0.707203 0.70701 -0.707203 0.70701 1.28125 0.384766)" fill="white"/>
+              </svg>
+            </div>
           </div>
         </div>
       </nav>
@@ -335,7 +380,7 @@
       </div>
     </div>
     <div id="section__container">
-      <div class="carousel__wrapper grid">
+      <section class="carousel__wrapper grid">
         <div class="active">
           <img src="../assets/images/woman-massaging-leg-sauna 1.png" alt="" />
         </div>
@@ -348,8 +393,8 @@
         <div class="prev">
           <img src="../assets/images/restaurant.png" alt="" />
         </div>
-      </div>
-      <div class="_yard_container">
+      </section>
+      <section class="_yard_container">
         <div class="container">
           <div class="_yard_container_inner">
             <div class="_yard_container_inner_context">
@@ -362,8 +407,40 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="horizontalscroll__container">
+      </section>
+      <section class="accordion_section">
+        <div class="accordion_section_container">
+            <h3>Пешком</h3>
+            <div class="container_accordion">
+              <div class="accordion_box">
+                <span>Западный обход</span>
+                <img src="../assets/images/number.png" alt="" />
+              </div>
+              <div class="accordion_box">
+                <span>Город спорта</span>
+                <img src="../assets/images/number.png" alt="" />
+              </div>
+              <div class="accordion_box">
+                <span>ТРЦ «Красная площадь»</span>
+                <img src="../assets/images/number.png" alt="" />
+              </div>
+            </div>
+            <p>Эрмитаж расположен в районе. где кипит жизнь. Как на машине, так и на общественном транспорте резиденты легко и быстро доберутся до любой локации города. До исторического центра Краснодара путь займёт 20 минут, до побережья Чёрного или Азовского моря — 1,5 часа.</p>
+            <h3>Пешком</h3>
+            <div class="container_accordion">
+              <div class="accordion_box">
+                <span>Государственный медицинский университет</span>
+                <img src="../assets/images/number.png" alt="" />
+              </div>
+              <div class="accordion_box">
+                <span>Морское побережье</span>
+                <img src="../assets/images/number.png" alt="" />
+              </div>
+              
+            </div>
+          <div>
+      </section>
+      <section class="horizontalscroll__container">
         <div class="">
           <div class="h_innercard">
             <div class="h_number_container">
@@ -379,7 +456,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div class="footer_outer_container">
         <div class="container">
           <div class="footerupper_section">

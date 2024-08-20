@@ -3,6 +3,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const headerSticky = document.querySelector(".header_sticky");
   const children = heroContainer.children;
 
+  let navtoggler = document.querySelector(".menutoggler");
+  navtoggler.addEventListener("click", handleClick);
+
+  function handleClick() {
+    if (document.documentElement.classList.contains("open")) {
+      // Use `contains` instead of `include`
+      document.documentElement.classList.remove("open");
+    } else {
+      document.documentElement.classList.add("open");
+    }
+    console.log("clicked");
+  }
+
   let secondChild = children[2];
   let secondChildTop = secondChild.offsetTop;
 
