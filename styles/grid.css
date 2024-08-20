@@ -1,0 +1,48 @@
+:root {
+  /* Desktop 1920 */
+  --columns-desktop: 12;
+  --gutter-desktop: 32px;
+  --column-width-desktop: calc((100% - (var(--columns-desktop) - 1) * var(--gutter-desktop)) / var(--columns-desktop));
+
+  /* Tablet 1024 */
+  --columns-tablet-1024: 12;
+  --gutter-tablet-1024: 24px;
+  --column-width-tablet-1024: calc((100% - (var(--columns-tablet-1024) - 1) * var(--gutter-tablet-1024)) / var(--columns-tablet-1024));
+
+  /* Tablet 768 */
+  --columns-tablet-768: 8;
+  --gutter-tablet-768: 20px;
+  --column-width-tablet-768: calc((100% - (var(--columns-tablet-768) - 1) * var(--gutter-tablet-768)) / var(--columns-tablet-768));
+
+  /* Mobile 375 */
+  --columns-mobile: 4;
+  --gutter-mobile: 16px;
+  --column-width-mobile: calc((100% - (var(--columns-mobile) - 1) * var(--gutter-mobile)) / var(--columns-mobile));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns-desktop), var(--column-width-desktop));
+  grid-gap: var(--gutter-desktop);
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(var(--columns-tablet-1024), var(--column-width-tablet-1024));
+    grid-gap: var(--gutter-tablet-1024);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(var(--columns-tablet-768), var(--column-width-tablet-768));
+    grid-gap: var(--gutter-tablet-768);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .grid {
+    grid-template-columns: repeat(var(--columns-mobile), var(--column-width-mobile));
+    grid-gap: var(--gutter-mobile);
+  }
+}

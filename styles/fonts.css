@@ -98,6 +98,13 @@
 }
 
 @font-face {
+    font-family: 'TT Ricordi';
+    src: url('../assets//TTCommons//TT\ Ricordi\ Allegria\ Trial\ Regular.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
     font-family: 'TT Commons';
     src: url('../assets/TTCommons/TTCommons-DemiBoldItalic.eot');
     src: local('TT Commons DemiBold Italic'), local('TTCommons-DemiBoldItalic'),

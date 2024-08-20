@@ -1,5 +1,6 @@
 @import url("../styles/fonts.css");
 @import url("../styles/container.css");
+@import url("../styles/grid.css");
 
 *,
 ::after,
@@ -14,6 +15,7 @@
   --color-dark: #1e1c1f;
   --color-divider: #5b5240;
   --color-gold: #d3b6ae;
+  --color-gold2: #d3b6a5;
   --color-grey: #b8b3ae;
   --color-gold-light: #f0e1d9;
   --color-white: #ffffff;
@@ -58,37 +60,13 @@
   --font-weight-black: 900;
 
   /* Font Families */
-  --font-family-title: "TT Ricordi Allegria Trial", serif;
+  --font-family-title: "TT Ricordi", serif;
   --font-family-main: "TT Commons", sans-serif;
 }
 
 body {
   font-family: var(--font-family-main);
   background-color: var(--color-dark);
-}
-
-h1 {
-  font-family: var(--font-family-title);
-  font-size: var(--font-size-h1);
-  line-height: var(--line-height-h1);
-  font-weight: var(--font-weight-black);
-  color: var(--font-color-main);
-}
-
-h2 {
-  font-family: var(--font-family-title);
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
-  font-weight: var(--font-weight-bold);
-  color: var(--font-color-main);
-}
-
-h3 {
-  font-family: var(--font-family-title);
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
-  font-weight: var(--font-weight-medium);
-  color: var(--font-color-main);
 }
 
 p,
@@ -124,33 +102,33 @@ li {
   font-size: var(--font-size-body);
 }
 
-.nav_right button{
-    border:none;
-    outline:none;
-    background-color: transparent;
-    font-size: var(--font-size-body);
-    color: var(--bg-light);
-    line-height: 150%;
+.nav_right button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: var(--font-size-body);
+  color: var(--bg-light);
+  line-height: 150%;
 }
 
-.nav_right .hamburger{
-    width: 60px;
-    min-height:44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
+.nav_right .hamburger {
+  width: 60px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
 }
 
-.nav_right{
-    display: flex;
-    gap: 60px;
+.nav_right {
+  display: flex;
+  gap: 60px;
 }
 
-.nav_right .hamburger div{
-    width: 100%;
-    height: 2px;
-    background-color: var(--bg-light);
+.nav_right .hamburger div {
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-light);
 }
 
 .primary-btn:hover {
@@ -213,8 +191,9 @@ li {
   align-items: center;
 }
 
-
-
+#nav_header__wrapper {
+  width: 100%;
+}
 nav {
   padding: 30px;
   display: flex;
@@ -225,79 +204,393 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 30;
 }
 
-header{
-  position: relative;
+header {
   height: 100vh;
   width: 100%;
-
 }
 
-.h_building_container{
-  position:absolute;
-  top:0;
-  left: 0;
+.h_building_container {
   width: 100%;
   height: 100%;
 }
 
-header .heading{
-    padding-top: 200px;
-    height: 100%;
+header .heading {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.heading__name{
+.heading__name {
   display: flex;
   gap: 45px;
   justify-content: center;
   align-items: center;
 }
 
-.h_building_container{
-  position:absolute;
+.h_building_container {
+  position: absolute;
 }
-.h_building_container_inner{
+.h_building_container_inner {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
-.h__building{
+.h__building {
   width: 691px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
-.h__building img{
+.h__building img {
   display: block;
   width: 100%;
 }
 
-.header_section{
-  min-height:100vh ;
-}
-
-#section__container{
+.header_section,
+.section__container {
   min-height: 100vh;
-  border:1px solid yellow;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-    
 
+.header_sectionone {
+  position: relative;
+}
+
+.header_sectionone > div:nth-child(1) {
+  z-index: 1;
+  position: absolute;
+  top: 203px;
+}
+
+.header__inner_right {
+  width: 710px;
+  min-height: 743px;
+}
+
+.header__inner_right img {
+  width: 100%;
+  display: block;
+  padding-top: 256px;
+}
+
+.header_sectionone > div:nth-child(2) {
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header_pinned {
+  height: 200vh;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header_sticky {
+  width: 1163px;
+  height: 100vh;
+  position: sticky;
+  display: flex;
+  top: 0;
+  right: 0;
+  align-items: end;
+  transform-origin: 0%;
+  justify-content: center;
+  z-index: 20;
+}
+.header_sticky img {
+  display: block;
+  width: 691px;
+}
+.header_sectionthree {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.header_sectionthree img {
+  width: 1163px;
+  margin-top: -200px;
+}
+.header_sticky__top {
+  top: 0;
+}
+
+.hero__header {
+  width: 100%;
+  height: 100vh;
+}
+.hero__inner_header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.hero_img_container {
+  width: 691px;
+  height: 100%;
+  margin-left: 628px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.hero_img_container img {
+  display: block;
+  width: 100%;
+}
+.header_section_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header__inner_left {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-bottom: 304px;
+  justify-content: flex-end;
+}
+
+.header__inner_left > div:nth-child(1) {
+  font-size: 16px;
+  font-family: "TT Commons";
+  width: 267px;
+  text-transform: uppercase;
+}
+
+.header__inner_left > div:nth-child(2) {
+  width: 196px;
+  line-height: 0;
+  position: relative;
+}
+
+.header__inner_left > div:nth-child(2) span {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: var(--font-family-main);
+  color: var(--color-gold2);
+}
+
+.circle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.header__inner_left > div:nth-child(2) .span2 {
+  padding-left: 20px;
+}
+
+.header__container {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+#section__container {
+  height: 100vh;
+  position: relative;
+  padding-top: 203px;
+}
+.carousel__wrapper {
+  gap: 32px;
+}
+
+.carousel__wrapper > div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__wrapper > div.active {
+  height: 800px;
+  grid-column: 1 / span 6;
+}
+.carousel__wrapper > div.next {
+  grid-column: 7 / span 4;
+  height: 700px;
+}
+
+.carousel__wrapper > div.prev {
+  grid-column: 11 / span 2;
+  height: 500px;
+}
+
+._yard_container {
+  padding: 230px 0;
+}
+
+._yard_container > div {
+  height: 700px;
+  position: relative;
+}
+
+._yard_container_inner {
+  position: relative;
+  height: 700px;
+}
+
+._yard_container_inner > div:nth-child(2) {
+  position: absolute;
+  z-index: 0;
+  width: 864px;
+  height: 700px;
+  left: 299px;
+}
+._yard_container_inner > div:nth-child(1) {
+  position: absolute;
+  z-index: 10;
+  bottom: 60px;
+}
+._yard_container_inner_context {
+  width: 804px;
+}
+._yard_container_inner_context h3 {
+  text-align: left;
+  color: white;
+  font-family: var(--font-family-title);
+  text-transform: uppercase;
+  font-size: 92px;
+}
+
+._yard_imgcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+._yard_imgcontainer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.horizontalscroll__container {
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
+}
+
+.horizontalscroll__container > div {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.h_innercard {
+  width: 33.33%;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0e1d9;
+}
+.h_innercard > span {
+  color: var(--color-dark);
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.h_number_container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.5;
+  padding-top: 60px;
+}
+.h_number_container span:nth-child(1) {
+  font-size: 300px;
+  font-family: var(--font-family-main);
+  color: #d3b6a5;
+}
+.h_number_container span:nth-child(2) {
+  padding-left: 15px;
+}
+.h_innerscroll {
+  width: 66.66%;
+  display: flex;
+}
+.h_innerscroll div {
+  width: calc(100% / 2);
+}
+.h_innerscroll div:nth-child(1) {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 32px;
+}
+.h_innerscroll div:nth-child(2) img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer_outer_container {
+  padding: 230px 0 60px 0;
+}
+
+.footer_outer_container .container{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.footerupper_section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+.heading__name svg{
+  width: 100% !important;
+}
+
+.footerupper_section .coins {
+  width: 416px;
+}
+
+.footerupper_section .coins img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footerupper_section > div:nth-child(1) {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.award_title{
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-family: var(--font-family-title);
+  font-size: 32px;
+}
 @media (max-width: 767px) {
   :root {
     --font-size-h1: 48px;
     --font-size-h2: 32px;
     --font-size-h3: 24px;
     --font-size-body: 14px;
-  }
-
-  h1,
-  h2,
-  h3 {
-    line-height: 1.2;
   }
 
   .primary-btn {
@@ -322,12 +615,6 @@ header .heading{
     --font-size-body: 16px;
   }
 
-  h1,
-  h2,
-  h3 {
-    line-height: 1.3;
-  }
-
   .primary-btn {
     padding: 12px 18px;
     font-size: var(--font-size-body);
@@ -350,12 +637,6 @@ header .heading{
     --font-size-body: 18px;
   }
 
-  h1,
-  h2,
-  h3 {
-    line-height: 1.2;
-  }
-
   .primary-btn {
     padding: 14px 20px;
     font-size: var(--font-size-body);
@@ -376,12 +657,6 @@ header .heading{
     --font-size-h2: 96px;
     --font-size-h3: 64px;
     --font-size-body: 24px;
-  }
-
-  h1,
-  h2,
-  h3 {
-    line-height: 1.2;
   }
 
   .primary-btn {

@@ -2,7 +2,7 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px; 
+    padding: 0 80px; 
     box-sizing: border-box;
 }
 
@@ -36,4 +36,47 @@
         max-width: 343px;
         padding: 0 16px; 
     }
+}
+
+
+
+
+/* Base Container Width (apply to all sizes) */
+:root {
+  --container-width: 100%;
+}
+
+/* For Small Devices (Mobile: 375px and below) */
+@media (max-width: 375px) {
+  :root {
+    --container-width: 320px;
+  }
+}
+
+/* For Medium Devices (Tablet: 768px and below) */
+@media (max-width: 768px) {
+  :root {
+    --container-width: 720px;
+  }
+}
+
+/* For Large Devices (Desktops: 1024px and below) */
+@media (max-width: 1024px) {
+  :root {
+    --container-width: 960px;
+  }
+}
+
+/* For Extra Large Devices (Desktops: 1920px and below) */
+@media (max-width: 1920px) {
+  :root {
+    --container-width: 1440px;
+  }
+}
+
+/* For Ultra High-Resolution Devices (4K and above) */
+@media (min-width: 2560px) {
+  :root {
+    --container-width: 1920px;
+  }
 }
